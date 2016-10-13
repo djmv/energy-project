@@ -1,0 +1,17 @@
+<%= javascript_include_tag "updater", 'data-turbolinks-track' => true %>
+
+<h1>Último valor registrado de potencia</h1>
+<table style="border:1px solid black">
+	<tr>
+		<th style="border:1px solid black">Valor</th>
+		<th style="border:1px solid black">Fecha</th>
+	</tr>
+	<tr>
+		<td style="border:1px solid black"><div id="valor"><%= @lastpower.value %></div></td>
+		<td style="border:1px solid black"><div id="fecha"><%= @lastpower.created_at %></div></td>
+	</tr>
+</table>
+
+<div id="grafica">
+	<%= render "/realtime/realtime" %>
+</div>

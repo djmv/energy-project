@@ -1,0 +1,14 @@
+var doStuff = function () {
+	//$('#product').append("<%# j render :partial => 'product', :locals => {:product => Product.show({id:} %>")
+	$.ajax({
+	   url: '/precios/obtener',
+	   dataType: 'html',
+	   success: function(data) {
+			console.log($(data).filter("#result").text());
+			$('#product').html($(data).filter("#result").text())	      
+	   },
+	   type: 'GET'
+	});
+};
+setInterval(doStuff, 1000);
+$('#enlace').hide().after("<%= j render :partial => 'form', :object => @product %>")
