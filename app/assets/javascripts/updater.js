@@ -6,8 +6,7 @@ $(document).ready(function(){
 		   success: function(data) {
 				$('#valor').html($(data).filter("#result").text())	   
 				$('#fecha').html($(data).filter("#result2").text())
-				$("#grafica").hide()
-				$("#grafica").show()
+				$('#grafica').load('/realtime/refresh_part');
 		   },
 		   type: 'GET'
 		});

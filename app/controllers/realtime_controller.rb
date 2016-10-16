@@ -11,4 +11,8 @@ class RealtimeController < ApplicationController
   		@message = 'No se pudo añadir'
   	end
   end
+
+  def refresh_part
+    render :partial => "/realtime/realtime"
+  end
 end

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'precios/index'
   get 'precios/obtener'
   get 'realtime/_realtime'
+  get 'realtime/refresh_part'
   resources :products
 
   get 'realtime/index'
