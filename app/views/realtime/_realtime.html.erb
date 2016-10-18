@@ -1,1 +1,1 @@
-<%= line_chart Power.pluck(:created_at,:value) %>
+<%= line_chart Power.where('created_at >= ?', 1.hour.ago).pluck(:created_at,:value) %>
