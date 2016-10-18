@@ -1,17 +1,47 @@
 <%= javascript_include_tag "updater", 'data-turbolinks-track' => true %>
-
-<h1>Último valor registrado de potencia</h1>
-<table style="border:1px solid black">
-	<tr>
-		<th style="border:1px solid black">Valor</th>
-		<th style="border:1px solid black">Fecha</th>
-	</tr>
-	<tr>
-		<td style="border:1px solid black"><div id="valor"><%= @lastpower.value %></div></td>
-		<td style="border:1px solid black"><div id="fecha"><%= @lastpower.created_at %></div></td>
-	</tr>
-</table>
-
-<div id="grafica">
-	<%= render "/realtime/realtime" %>
+<div class="row">
+	<div class="col s12 m4 l2"></div>
+	<div class="col s12 m4 l8">
+		<h4 class="center-align">Último valor registrado de potencia</h4>
+	</div>
+	<div class="col s12 m4 l2"></div>
 </div>
+<div class="row">
+	<div class="col s12 m4 l2"></div>
+	<div class="col s12 m4 l8">
+
+		<table class="responsive-table bordered striped highlight centered">
+			<thead>
+				<tr>
+					<th>Valor</th>
+					<th>Fecha</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><div id="valor">
+					<% if @lastpower.value == nil %>
+						<h1>No hay datos disponibles</h1>
+					<% else %>
+						<%= @lastpower.value %>
+					<%end%> 
+					  %></div></td>
+					<td><div id="fecha">
+					<% if @lastpower.created_at == nil %> 
+					
+					<%else%>
+						<%= @lastpower.created_at %>
+					<%end%> 
+					 </div></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col s12 m4 l2"></div>
+</div>
+<% if @lastpower.value == nil %>
+<% else %>
+	<div id="grafica" class="row">
+	<%= render "/realtime/realtime" %>
+	</div>
+<%end%> 
