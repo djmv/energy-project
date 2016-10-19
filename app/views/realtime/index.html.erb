@@ -20,14 +20,14 @@
 			<tbody>
 				<tr>
 					<td><div id="valor">
-					<% if @lastpower.value == nil %>
+					<% if @lastpower == nil %>
 						<h1>No hay datos disponibles</h1>
 					<% else %>
 						<%= @lastpower.value %>
 					<%end%> 
-					  %></div></td>
+					</div></td>
 					<td><div id="fecha">
-					<% if @lastpower.created_at == nil %> 
+					<% if @lastpower == nil %> 
 					
 					<%else%>
 						<%= @lastpower.created_at %>
@@ -39,7 +39,7 @@
 	</div>
 	<div class="col s12 m4 l2"></div>
 </div>
-<% if @lastpower.value == nil %>
+<% if @lastpower == nil %>
 <% else %>
 	<div id="grafica" class="row">
 	<%= render "/realtime/realtime" %>

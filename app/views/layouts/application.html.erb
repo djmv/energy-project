@@ -10,6 +10,12 @@
 </head>
 <body>
 <%= render template: "layouts/_navbar.html.erb"%>
+<div class="row">
+	<div class="col s12 m4 l2"></div>
+		<%= image_tag("103.png",size: "2:4", class: "parallax centered col s12 m4 l8")%></div>	
+	<div class="col s12 m4 l2"></div>
+</div>
+    
 <%= yield %>
 <%= render template: "layouts/_footer.html.erb"%>
 </body>
