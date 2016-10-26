@@ -36,12 +36,14 @@
 				</tr>
 			</tbody>
 		</table>
+		<br><br>
+		<% if @lastpower == nil %>
+		<% else %>
+			<div id="grafica" class="row">
+			<%= render "/realtime/realtime" %>
+			</div>
+		<%end%> 
+
 	</div>
 	<div class="col s12 m4 l2"></div>
 </div>
-<% if @lastpower == nil %>
-<% else %>
-	<div id="grafica" class="row">
-	<%= render "/realtime/realtime" %>
-	</div>
-<%end%> 

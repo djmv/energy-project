@@ -1,1 +1,2 @@
-<%= line_chart Power.where('created_at >= ?', 1.hour.ago).pluck(:created_at,:value) %>
+<%# line_chart Power.where('created_at >= ?', 1.hour.ago).pluck(:created_at,:value), xtitle: "Tiempo", ytitle: "Potencia (W)" %>
+<%= line_chart Power.where(:created_at => DateTime.civil(2016, 10, 26, 0, 0, 0, 0).beginning_of_day..DateTime.civil(2016, 10, 26, 0, 0, 0, 0).end_of_day).pluck(:created_at,:value), xtitle: "Tiempo", ytitle: "Potencia (W)" %>
