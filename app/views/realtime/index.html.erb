@@ -1,47 +1,49 @@
 <%= javascript_include_tag "updater", 'data-turbolinks-track' => true %>
-<div class="row">
-	<div class="col s12 m4 l2"></div>
-	<div class="col s12 m4 l8">
-		<h4 class="center-align">Último valor registrado de potencia</h4>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1><center>Último valor registrado</center></h1>
+		</div>
+		<div class="col-xs-12">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Valor</th>
+						<th>Fecha</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div id="valor">
+								<% if @lastpower == nil %>
+									<h1>No hay datos disponibles</h1>
+								<% else %>
+									<p>Loading...</p>
+								<% end %> 
+							</div>
+						</td>
+						<td>
+							<div id="fecha">
+								<% if @lastpower == nil %> 
+								
+								<% else %>
+									<p>Loading...</p>
+								<% end %> 
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>		
+		<div class="col-xs-12">
+		<br><br>
+			<% if @lastpower == nil %>
+			<% else %>
+				<div id="grafica" class="row">
+					<%= render "/realtime/realtime" %>
+				</div>
+			<%end%> 
+		</div>
 	</div>
-	<div class="col s12 m4 l2"></div>
 </div>
-<div class="row">
-	<div class="col s12 m4 l2"></div>
-	<div class="col s12 m4 l8">
-
-		<table class="responsive-table bordered striped highlight centered">
-			<thead>
-				<tr>
-					<th>Valor</th>
-					<th>Fecha</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><div id="valor">
-					<% if @lastpower == nil %>
-						<h1>No hay datos disponibles</h1>
-					<% else %>
-						<%= @lastpower.value %>
-					<%end%> 
-					</div></td>
-					<td><div id="fecha">
-					<% if @lastpower == nil %> 
-					
-					<%else%>
-						<%= @lastpower.created_at %>
-					<%end%> 
-					 </div></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="col s12 m4 l2"></div>
-</div>
-<% if @lastpower == nil %>
-<% else %>
-	<div id="grafica" class="row">
-	<%= render "/realtime/realtime" %>
-	</div>
-<%end%> 

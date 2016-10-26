@@ -15,4 +15,17 @@ class RealtimeController < ApplicationController
   def refresh_part
     render :partial => "/realtime/realtime"
   end
+
+  def show
+    @lastpower = Power.last
+    render json: @lastpower
+  end
+
+  def historics
+    @todo = Power.last
+  end
+
+  def historica
+    render :partial => "/realtime/historic", :locals => {:fechai => 36}
+  end
 end

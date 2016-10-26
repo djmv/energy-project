@@ -1,0 +1,38 @@
+<%= javascript_include_tag "searchfor", 'data-turbolinks-track' => true %>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="col-xs-6">
+				<div class="form-group">
+	                <div class='input-group date' id='datetimepicker1'>
+	                    <input type='text' class="form-control" />
+	                    <span class="input-group-addon">
+	                        <span class="glyphicon glyphicon-calendar"></span>
+	                    </span>
+	                </div>
+	            </div>
+            </div>
+            <div class="col-xs-6">
+				<div class="form-group">				
+	                <div class='input-group date' id='datetimepicker2'>
+	                    <input type='text' class="form-control" />
+	                    <span class="input-group-addon">
+	                        <span class="glyphicon glyphicon-calendar"></span>
+	                    </span>
+	                </div>
+	            </div>
+            </div>
+            <div class="col-xs-6">
+				<button type="submit" id="butoncito" class="btn btn-default">Submit</button>
+				<br><br>
+            </div>
+            <div class="col-xs-12" id="grafica2" />
+		</div>		
+	</div>
+	<script type="text/javascript">
+		$(function () {
+            $('#datetimepicker1').datetimepicker();
+            $('#datetimepicker2').datetimepicker();
+        });
+	</script>
+</div>

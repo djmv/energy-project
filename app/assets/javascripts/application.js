@@ -12,10 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require materialize-sprockets
+//= require bootstrap-sprockets
 //= require updater
+//= require searchfor
 //= require Chart.bundle
 //= require highcharts
 //= require chartkick
+//= require moment
+//= require bootstrap-datetimepicker
 = require turbolinks
 //= require_tree .
