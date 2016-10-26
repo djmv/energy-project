@@ -1,11 +1,12 @@
 $(document).ready(function(){
    var doStuff = function () {
 		$.ajax({
-		   url: '/precios/obtener',
-		   dataType: 'html',
+		   url: '/realtime/obtain',
+		   dataType: 'json',
 		   success: function(data) {
-				$('#valor').html($(data).filter("#result").text())	   
-				$('#fecha').html($(data).filter("#result2").text())
+				$('#valor').html(data.value)
+				var fecha = new Date(data.created_at)
+				$('#fecha').html(fecha)
 				$('#grafica').load('/realtime/refresh_part');
 		   },
 		   type: 'GET'

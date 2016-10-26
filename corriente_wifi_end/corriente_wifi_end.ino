@@ -36,14 +36,12 @@
 //  rms = 0;
 //  delay(1000);
 //}
-
 #include <SoftwareSerial.h>
 int voltaje_pin=0, corriente_pin=1;
 double valor_corriente[110],valor_voltaje[110];
 int i=0, j=0, tiempo;
 double a,b,pot;
  SoftwareSerial ModuloWiFi(3,2); // RX, TX
-
 void GETrequest(double i){
   ModuloWiFi.write("AT+CIPSTART=\"TCP\",\"192.168.1.3\",80\r\n");
   delay(10);
@@ -56,12 +54,10 @@ void GETrequest(double i){
   ModuloWiFi.print(i);
   ModuloWiFi.print(" HTTP/1.1\r\nHost: 192.168.1.3\r\n\r\n");
 }
-
 void setup(){
  Serial.begin(115200);
  ModuloWiFi.begin(115200);   
 }
-
 void loop(){
   
    i=0;
@@ -90,10 +86,10 @@ void loop(){
    }
        //Serial.println(j);
     //Serial.println(i);
-    if (pot<0) {
+    pot=pot/(j-20);
+        if (pot<5) {
       pot=0.0;
       }
-    pot=pot/(j-20);
    Serial.println(pot,4);
    GETrequest(pot);
  double  valor_corriente[110]={0};

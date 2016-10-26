@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   get 'precios/obtener'
   get 'realtime/_realtime'
   get 'realtime/refresh_part'
+  get '/realtime/obtain', to: 'realtime#show'
+  get 'realtime/_historic'
+  get 'realtime/historica'
   resources :products
+
 
   get 'realtime/index'
   get 'realtime/add'
+  get 'realtime/historics'
   root 'realtime#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
