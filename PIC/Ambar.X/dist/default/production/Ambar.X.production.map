@@ -1,0 +1,46 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Oct 27 18:24:34 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000002    program   0x000004
+                   .org_1       code   0x000004    program   0x00006a
+.config_2007_BUILD/DEFAULT/PRODUCTION/MAIN.O       code   0x002007    program   0x000002
+.config_2008_BUILD/DEFAULT/PRODUCTION/MAIN.O       code   0x002008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000038      
+                            0x002007    0x002008      
+            59 out of 8455 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             _.org_1_0038   0x000038    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                  _1caso1   0x000021    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                  _1caso2   0x000024    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                   _1exit   0x000027    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                     main   0x000010    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                   prueba   0x000015    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     main   0x000010    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                   prueba   0x000015    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                  _1caso1   0x000021    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                  _1caso2   0x000024    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                   _1exit   0x000027    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+             _.org_1_0038   0x000038    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+
+
