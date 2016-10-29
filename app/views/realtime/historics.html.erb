@@ -1,17 +1,23 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-
-			<%= form_tag "/realtime/historica", method: "get", remote: true do %>
-			  	<%= date_select(:tiempo,"tiempo",:class => 'select') %>
-			  	<%#select_datetime()%>
+			<%= form_tag({controller: "realtime", action: "historica"}, method: "get", remote: true) do %>
+			  	<%= datetime_select(:tiempoi,"ti",:class => 'select') %>
+			  	hasta
+			  	<%= datetime_select(:tiempof,"tf",:class => 'select') %>
 				<%= submit_tag("Search") %>
 			<% end %>
 
 		</div>
 	</div>
 </div>
-<div id="resultado">
-	
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div id="resultado">
+				
 
+			</div>
+		</div>
+	</div>
 </div>

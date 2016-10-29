@@ -24,9 +24,14 @@ class RealtimeController < ApplicationController
   def historics
     @todo = Power.last
     puts [:tiempo]
+
   end
 
   def historica
-    puts params[:tiempo]
+    puts [:tiempoi]
+    puts "hola"
+    puts [:tiempof]
+    d=DateTime.civil(params[:tiempoi]["ti(1i)"].to_i,params[:tiempoi]["ti(2i)"].to_i, params[:tiempoi]["ti(3i)"].to_i, params[:tiempoi]["ti(4i)"].to_i, params[:tiempoi]["ti(5i)"].to_i, 0, 0)
+    puts d
   end
 end
