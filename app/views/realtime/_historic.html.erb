@@ -1,1 +1,1 @@
-<%= line_chart Power.where(:created_at => DateTime.civil(fechai, 10, 26, 0, 0, 0, 0).beginning_of_day..DateTime.civil(2016, 10, 26, 0, 0, 0, 0).end_of_day).pluck(:created_at,:value), xtitle: "Tiempo", ytitle: "Potencia (W)" %>
+<%= line_chart Power.where(:created_at => DateTime.civil(2016, 10, 27, 0, 0, 0, 0).beginning_of_day..DateTime.civil(2016, 10, 28, 0, 0, 0, 0).end_of_day).pluck(:created_at,:value), xtitle: "Tiempo", ytitle: "Potencia (W)" %>

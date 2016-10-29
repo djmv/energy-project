@@ -23,9 +23,10 @@ class RealtimeController < ApplicationController
 
   def historics
     @todo = Power.last
+    puts [:tiempo]
   end
 
   def historica
-    render :partial => "/realtime/historic", :locals => {:fechai => 36}
+    puts params[:tiempo]
   end
 end

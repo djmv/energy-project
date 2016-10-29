@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/realtime/obtain', to: 'realtime#show'
   get 'realtime/_historic'
   get 'realtime/historica'
+  get 'realtime/jj'
   resources :products
 
 
