@@ -28,10 +28,10 @@ class RealtimeController < ApplicationController
   end
 
   def historica
-    puts [:tiempoi]
-    puts "hola"
-    puts [:tiempof]
-    d=DateTime.civil(params[:tiempoi]["ti(1i)"].to_i,params[:tiempoi]["ti(2i)"].to_i, params[:tiempoi]["ti(3i)"].to_i, params[:tiempoi]["ti(4i)"].to_i, params[:tiempoi]["ti(5i)"].to_i, 0, 0)
-    puts d
+    #puts params[:date][:ti]
+    #d1 = DateTime.strptime(params[:date][0], "%m/%d/%Y %I:%M %p")
+    #d=DateTime.civil(params[:tiempoi]["ti(1i)"].to_i,params[:tiempoi]["ti(2i)"].to_i, params[:tiempoi]["ti(3i)"].to_i, params[:tiempoi]["ti(4i)"].to_i, params[:tiempoi]["ti(5i)"].to_i, 0, 0)
+    #puts d
+    #puts d1
   end
 end
