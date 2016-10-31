@@ -1,50 +1,60 @@
 <%= javascript_include_tag "updater", 'data-turbolinks-track' => true %>
 
-<div class="container">
-	<div class="row">
-		<div class="page-header">
-		  <h1>Consumo de potencia <small>en tiempo real</small></h1>
-		</div>
-		<div class="col-xs-12">
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Valor</th>
-						<th>Fecha</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<div id="valor">
-								<% if @lastpower == nil %>
-									<h1>No hay datos disponibles</h1>
-								<% else %>
-									<p>Loading...</p>
-								<% end %> 
-							</div>
-						</td>
-						<td>
-							<div id="fecha">
-								<% if @lastpower == nil %> 
-								
-								<% else %>
-									<p>Loading...</p>
-								<% end %> 
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>	
-		</div>		
-		<div class="col-xs-12">
-		<br><br>
-			<% if @lastpower == nil %>
-			<% else %>
-				<div id="grafica" class="row">
-					<%= render "/realtime/realtime" %>
-				</div>
-			<%end%> 
+<div class="col-lg-3 hidden-xs hidden-md hidden-sm">
+    <h3 class="centered">Ámbar</h3>
+    <div class="list-group">
+        <a href="/realtime/index" class="list-group-item active">Tiempo real</a>
+        <a href="/realtime/historics" class="list-group-item list-group-item-action">Históricos</a>
+    </div>
+    <%# image_tag("103.png", class: "col-xs-12") %>  
+</div>
+<div class="col-lg-9">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="page-header">
+			  <h1>Consumo de potencia <small>en tiempo real</small></h1>
+			</div>
+			<div class="col-xs-12">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Valor</th>
+							<th>Fecha</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div id="valor">
+									<% if @lastpower == nil %>
+										<h1>No hay datos disponibles</h1>
+									<% else %>
+										<p>Loading...</p>
+									<% end %> 
+								</div>
+							</td>
+							<td>
+								<div id="fecha">
+									<% if @lastpower == nil %> 
+									
+									<% else %>
+										<p>Loading...</p>
+									<% end %> 
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>		
+			<div class="col-xs-12">
+			<br><br>
+				<% if @lastpower == nil %>
+				<% else %>
+					<div id="grafica" class="row">
+						<%= render "/realtime/realtime" %>
+					</div>
+				<%end%> 
+			</div>
 		</div>
 	</div>
 </div>

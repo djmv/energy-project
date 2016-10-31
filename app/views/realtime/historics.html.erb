@@ -1,26 +1,39 @@
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12">		
-			<%= form_tag({controller: "realtime", action: "historica"}, method: "get", remote: true, :class => 'form-group') do %>
-				<div class="col-xs-6">	
-			  		Fecha inicial: <%= text_field :date, "ti", :class => 'form-control', :id => 'datetimepicker1' %>
-			  	</div>
-			  	<div class="col-xs-6">	
-			  		Fecha final: <%= text_field :date, "tf", :class => 'form-control', :id => 'datetimepicker2' %>
-			  	</div>			  	
-			  	<div class="col-xs-6">	
-			  		<br>
-			  		<%= submit_tag("Buscar", :class => 'btn btn-primary') %>
-			  		<br><br><br>
-			  	</div>				
-			<% end %>
-		</div>
-	</div>
+<div class="col-lg-3 hidden-xs hidden-md hidden-sm">
+    <h3 class="centered">Ámbar</h3>
+    <div class="list-group">
+        <a href="/realtime/index" class="list-group-item list-group-item-action">Tiempo real</a>
+        <a href="/realtime/historics" class="list-group-item active">Históricos</a>
+    </div>
+    <%# image_tag("103.png", class: "col-sm-12") %>  
 </div>
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			<div id="resultado" />
+<div class="col-lg-9">
+    <div class="container-fluid">
+		<div class="row">
+			<div class="page-header">
+			  <h1>Históricos<small> de potencia</small></h1>
+			</div>
+			<div class="col-sm-12">		
+				<%= form_tag({controller: "realtime", action: "historica"}, method: "get", remote: true, :class => 'form-group') do %>
+					<div class="col-sm-6">
+						<%= label_tag(:date, "Fecha inicial:") %>	
+				  		<%= text_field :date, "ti", :class => 'form-control', :id => 'datetimepicker1' %>
+				  	</div>
+				  	<div class="col-sm-6">	
+				  		<%= label_tag(:date, "Fecha final:") %>	
+				  		<%= text_field :date, "tf", :class => 'form-control', :id => 'datetimepicker2' %>
+				  	</div>			  	
+				  	<div class="col-sm-6">	
+				  		<br>
+				  		<%= submit_tag("Buscar", :class => 'btn btn-primary') %>
+				  		<br><br><br>
+				  	</div>				
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="resultado" />
+			</div>
 		</div>
 	</div>
 </div>
