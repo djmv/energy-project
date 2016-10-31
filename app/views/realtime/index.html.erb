@@ -1,5 +1,4 @@
 <%= javascript_include_tag "updater", 'data-turbolinks-track' => true %>
-
 <div class="col-lg-3 hidden-xs hidden-md hidden-sm">
     <h3 class="centered">Ámbar</h3>
     <div class="list-group">
@@ -52,6 +51,9 @@
 				<% else %>
 					<div id="grafica" class="row">
 						<%= render "/realtime/realtime" %>
+					</div>
+					<div id="promedio" class="row">
+						Loading...
 					</div>
 				<%end%> 
 			</div>
