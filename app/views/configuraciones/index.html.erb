@@ -1,0 +1,33 @@
+<div class="col-lg-3 hidden-xs hidden-md hidden-sm">
+    <div class="list-group">
+        <a href="/realtime/index" class="list-group-item list-group-item-action">Tiempo real</a>
+        <a href="/realtime/historics" class="list-group-item list-group-item-action">Históricos</a>
+        <a href="/configuraciones/index" class="list-group-item active">Configuración</a>
+    </div>
+    <%# image_tag("103.png", class: "col-xs-12") %>  
+</div>
+<div class="col-lg-9">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="page-header">
+			  <h1>Consumo de potencia <small>en tiempo real</small></h1>
+			</div>
+			<div class="col-xs-12">
+				<%= form_tag({controller: "configuraciones", action: "update"}, method: "get", :class => 'form-group') do %>
+					<div class="col-sm-6">
+						<%= label_tag(:nombre, "Nombre:") %>	
+						<%= text_field :nombre, "", :value => @user.nombre, :class => 'form-control' %>
+					</div>
+					<div class="col-sm-6">
+						<%= label_tag(:costo_kw, "Costo del kilovatio hora:") %>	
+						<%= text_field :costo_kw, "", :value => @user.costo_kw, :class => 'form-control' %>
+					</div>
+					<div class="col-sm-6">
+						<br>
+				  		<%= submit_tag("Actualizar", :class => 'btn btn-primary') %>
+				  	</div>
+				<% end %>
+			</div>					
+		</div>
+	</div>
+</div>

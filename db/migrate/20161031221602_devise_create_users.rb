@@ -19,6 +19,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
+#      t.float    :costo_kw, null: false
+#      t.string   :name,  null: false
+#      t.string   :estrato, null: false
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
