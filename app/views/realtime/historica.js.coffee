@@ -1,2 +1,2 @@
 $("#resultado").html("<%= j render "/realtime/historic" %>")
-$("#promedio2").html("<%= @promedio.round(4) %>")
+$("#promedio2").html("<%= @promedio.round(4) %> kW/h")
