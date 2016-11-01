@@ -1,5 +1,5 @@
 build/default/production/main.o:  \
-	C:/Users/Carlos/MPLABXProjects/Ambar.X/main.asm  \
-	C:/Users/Carlos/MPLABXProjects/Ambar.X/p16f886.inc  \
-	C:/Users/Carlos/MPLABXProjects/Ambar.X/macros.inc  \
+	C:/Sites/energy-project/PIC/Ambar.X/main.asm  \
+	C:/Sites/energy-project/PIC/Ambar.X/p16f886.inc  \
+	C:/Sites/energy-project/PIC/Ambar.X/macros.inc  \
 

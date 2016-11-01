@@ -1,5 +1,5 @@
 MPLINK 5.08, LINKER
-Linker Map File - Created Thu Oct 27 18:24:34 2016
+Linker Map File - Created Fri Oct 28 09:39:40 2016
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -24,23 +24,23 @@ Linker Map File - Created Thu Oct 27 18:24:34 2016
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-             _.org_1_0038   0x000038    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                  _1caso1   0x000021    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                  _1caso2   0x000024    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                   _1exit   0x000027    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                     main   0x000010    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                   prueba   0x000015    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+             _.org_1_0038   0x000038    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                  _1caso1   0x000021    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                  _1caso2   0x000024    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                   _1exit   0x000027    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                     main   0x000010    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                   prueba   0x000015    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                     main   0x000010    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                   prueba   0x000015    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                  _1caso1   0x000021    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                  _1caso2   0x000024    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-                   _1exit   0x000027    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
-             _.org_1_0038   0x000038    program     static C:\Users\Carlos\MPLABXProjects\Ambar.X\main.asm
+                     main   0x000010    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                   prueba   0x000015    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                  _1caso1   0x000021    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                  _1caso2   0x000024    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+                   _1exit   0x000027    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
+             _.org_1_0038   0x000038    program     static C:\Sites\energy-project\PIC\Ambar.X\main.asm
 
 

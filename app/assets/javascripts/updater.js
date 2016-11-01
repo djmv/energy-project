@@ -4,9 +4,10 @@ $(document).ready(function(){
 		   url: '/realtime/obtain',
 		   dataType: 'json',
 		   success: function(data) {
-				$('#valor').html(data.value)
-				var fecha = new Date(data.created_at)
+				$('#valor').html(data.ultimo.value)
+				var fecha = new Date(data.ultimo.created_at)
 				$('#fecha').html(fecha)
+				$('#promedio').html('<p>'+data.promedio+' kW/h</p>')
 				$('#grafica').load('/realtime/refresh_part');
 		   },
 		   type: 'GET'
