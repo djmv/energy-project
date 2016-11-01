@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'precios/index'
   get 'precios/obtener'
   get 'realtime/_realtime'
