@@ -1,6 +1,8 @@
 class RealtimeController < ApplicationController
   def index
   	@lastpower = Power.last
+    @fecha= @lastpower[:created_at]
+    @datos = Power.where({created_at: (@fecha-5.minutes)..(@fecha) })
   end
 
   def add
@@ -13,6 +15,9 @@ class RealtimeController < ApplicationController
   end
 
   def refresh_part
+    @lastpower = Power.last
+    @fecha= @lastpower[:created_at]
+    @datos = Power.where({created_at: (@fecha-5.minutes)..(@fecha) })
     render :partial => "/realtime/realtime"
   end
 

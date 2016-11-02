@@ -10,18 +10,23 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="page-header">
-			  <h1>Consumo de potencia <small>en tiempo real</small></h1>
+			  <h1>Panel<small> de configuración</small></h1>
 			</div>
 			<div class="col-xs-12">
 				<%= form_tag({controller: "configuraciones", action: "update"}, method: "get", :class => 'form-group') do %>
-					<div class="col-sm-6">
+					<div class="col-sm-12">
 						<%= label_tag(:nombre, "Nombre:") %>	
 						<%= text_field :nombre, "", :value => @user.nombre, :class => 'form-control' %>
+						<br>
+					</div>
+					<div class="col-sm-6">
+						<%= label_tag(:estrato, "Estrato:") %>	
+						<%= select_tag :estrato, options_for_select([["Estrato 0","0"],["Estrato 1","1"],["Estrato 2","2"],["Estrato 3","3"],["Estrato 4","4"],["Estrato 5","5"]],@user.estrato), :class => 'form-control' %>
 					</div>
 					<div class="col-sm-6">
 						<%= label_tag(:costo_kw, "Costo del kilovatio hora:") %>	
 						<%= text_field :costo_kw, "", :value => @user.costo_kw, :class => 'form-control' %>
-					</div>
+					</div>					
 					<div class="col-sm-6">
 						<br>
 				  		<%= submit_tag("Actualizar", :class => 'btn btn-primary') %>
