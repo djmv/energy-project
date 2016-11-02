@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'configuraciones/index'
+
   devise_for :users
   get 'precios/index'
   get 'precios/obtener'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   get '/realtime/obtain', to: 'realtime#show'
   get 'realtime/_historic'
   get 'realtime/historica'
+  get 'configuraciones/update'
   get 'realtime/jj'
   resources :products
 

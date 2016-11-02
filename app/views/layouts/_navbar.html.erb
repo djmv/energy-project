@@ -16,8 +16,15 @@
         <li class="hidden-lg"><a href="/realtime/historics">Históricos</a></li>        
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Iniciar sesión", new_user_session_path %></li><li><%= link_to "Crear cuenta", new_user_registration_path %></li>
-      </ul>
+        <% if !user_signed_in? %>
+        <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
+        <li><%= link_to "Crear cuenta", new_user_registration_path %></li>
+        </ul>
+        <% else %>
+          <li><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></li>        
+        </ul>
+          <p class="navbar-text navbar-right">Hola, <a href="/configuraciones/index" class="navbar-link"><%= current_user.nombre %></a></p>
+        <% end %>
     </div>
   </div>
 </nav>

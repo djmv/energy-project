@@ -31,6 +31,16 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :costo_kw %><br />
+    <%= f.text_field :costo_kw %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
